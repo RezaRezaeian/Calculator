@@ -16,6 +16,7 @@ import java.util.function.ToDoubleBiFunction;
 public class MainActivity extends AppCompatActivity {
     double num1,num2,Result = 0;
     String name,text1,text2 = "";
+    boolean click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -256,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
         btnjam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                click = true;
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
@@ -272,6 +274,7 @@ public class MainActivity extends AppCompatActivity {
         btnmenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                click = true;
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
@@ -288,6 +291,7 @@ public class MainActivity extends AppCompatActivity {
         btnzarb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                click = true;
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
@@ -304,6 +308,7 @@ public class MainActivity extends AppCompatActivity {
         btntaqsim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                click = true;
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
@@ -326,10 +331,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length()==0) {
                     Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
-                }else if (text1.length()==0) {
+                }else if (click == false) {
                     Toast.makeText(MainActivity.this, "عملگر خود را انتخاب کنید", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     name = txtname.getText().toString();
                     Intent intent =new Intent (MainActivity.this,MainActivity2.class);
                     intent.putExtra("Result",Result);
