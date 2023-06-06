@@ -297,9 +297,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 name = txtname.getText().toString();
-                Intent intent =new Intent (MainActivity.this,MainActivity2.class);;
+                Intent intent =new Intent (MainActivity.this,MainActivity2.class);
                 intent.putExtra("Result",Result);
                 intent.putExtra("name",name);
+                startActivity(intent);
             }
         });
     }
