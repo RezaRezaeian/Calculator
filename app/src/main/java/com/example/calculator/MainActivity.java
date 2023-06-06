@@ -325,7 +325,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length()==0) {
                     Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
-                }else {
+                }else if (text1.length()==0) {
+                    Toast.makeText(MainActivity.this, "عملگر خود را انتخاب کنید", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     name = txtname.getText().toString();
                     Intent intent =new Intent (MainActivity.this,MainActivity2.class);
                     intent.putExtra("Result",Result);
