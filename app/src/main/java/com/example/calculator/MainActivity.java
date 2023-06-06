@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Button btntaqsim = findViewById(R.id.btntaqsim);
         Button btnmosavi = findViewById(R.id.btnmosavi);
         Button btnnoqte = findViewById(R.id.btnnoqte);
+        Button btndel = findViewById(R.id.btndel);
         EditText txtname = findViewById(R.id.txtName);
         EditText txtnum1 = findViewById(R.id.txtNum1);
         EditText txtnum2 = findViewById(R.id.txtNum2);
@@ -45,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus) {
+                    btndel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                        txtnum1.setText("");
+                        }
+                    });
                     txtnum1.setInputType(InputType.TYPE_NULL);
                     txtnum1.setFocusable(true);
                     btn0.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +128,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus) {
+                    btndel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            txtnum2.setText("");
+                        }
+                    });
                     txtnum2.setInputType(InputType.TYPE_NULL);
                     txtnum2.setFocusable(true);
                     btn0.setOnClickListener(new View.OnClickListener() {
@@ -196,6 +209,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
                 if (hasFocus) {
+                    btndel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            txtname.setText("");
+                        }
+                    });
                     btn0.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
