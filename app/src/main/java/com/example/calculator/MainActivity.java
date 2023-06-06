@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.function.ToDoubleBiFunction;
+
 public class MainActivity extends AppCompatActivity {
     double num1,num2,Result = 0;
     String name,text1,text2 = "";
@@ -38,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         EditText txtname = findViewById(R.id.txtName);
         EditText txtnum1 = findViewById(R.id.txtNum1);
         EditText txtnum2 = findViewById(R.id.txtNum2);
-
         txtnum1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -261,9 +262,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else {
                     text1 = txtnum1.getText().toString();
-                    num1 = Integer.parseInt(text1);
+                    num1 = Double.parseDouble(text1);
                     text2 = txtnum2.getText().toString();
-                    num2 = Integer.parseInt(text2);
+                    num2 = Double.parseDouble(text2);
                     Result = num1 + num2;
                 }
             }
@@ -277,9 +278,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else {
                     text1 = txtnum1.getText().toString();
-                    num1 = Integer.parseInt(text1);
+                    num1 = Double.parseDouble(text1);
                     text2 = txtnum2.getText().toString();
-                    num2 = Integer.parseInt(text2);
+                    num2 = Double.parseDouble(text2);
                     Result = num1 - num2;
                 }
             }
@@ -293,9 +294,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else {
                     text1 = txtnum1.getText().toString();
-                    num1 = Integer.parseInt(text1);
+                    num1 = Double.parseDouble(text1);
                     text2 = txtnum2.getText().toString();
-                    num2 = Integer.parseInt(text2);
+                    num2 = Double.parseDouble(text2);
                     Result = num1 * num2;
                 }
             }
@@ -309,9 +310,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else {
                     text1 = txtnum1.getText().toString();
-                    num1 = Integer.parseInt(text1);
+                    num1 = Double.parseDouble(text1);
                     text2 = txtnum2.getText().toString();
-                    num2 = Integer.parseInt(text2);
+                    num2 = Double.parseDouble(text2);
                     Result = num1 / num2;
                 }
             }
