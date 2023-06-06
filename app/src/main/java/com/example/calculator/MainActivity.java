@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    double num1,num2,Result;
+    double num1,num2,Result = 0;
     String name,text1,text2 = "";
 
     @Override
@@ -255,52 +255,83 @@ public class MainActivity extends AppCompatActivity {
         btnjam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text1 = txtnum1.getText().toString();
-                num1 = Integer.parseInt(text1);
-                text2 = txtnum2.getText().toString();
-                num2 = Integer.parseInt(text2);
-                Result = num1+num2;
+                if (txtnum1.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else if (txtnum2.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else {
+                    text1 = txtnum1.getText().toString();
+                    num1 = Integer.parseInt(text1);
+                    text2 = txtnum2.getText().toString();
+                    num2 = Integer.parseInt(text2);
+                    Result = num1 + num2;
+                }
             }
         });
         btnmenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text1 = txtnum1.getText().toString();
-                num1 = Integer.parseInt(text1);
-                text2 = txtnum2.getText().toString();
-                num2 = Integer.parseInt(text2);
-                Result = num1-num2;
+                if (txtnum1.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else if (txtnum2.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else {
+                    text1 = txtnum1.getText().toString();
+                    num1 = Integer.parseInt(text1);
+                    text2 = txtnum2.getText().toString();
+                    num2 = Integer.parseInt(text2);
+                    Result = num1 - num2;
+                }
             }
         });
         btnzarb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text1 = txtnum1.getText().toString();
-                num1 = Integer.parseInt(text1);
-                text2 = txtnum2.getText().toString();
-                num2 = Integer.parseInt(text2);
-                Result = num1*num2;
+                if (txtnum1.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else if (txtnum2.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else {
+                    text1 = txtnum1.getText().toString();
+                    num1 = Integer.parseInt(text1);
+                    text2 = txtnum2.getText().toString();
+                    num2 = Integer.parseInt(text2);
+                    Result = num1 * num2;
+                }
             }
         });
         btntaqsim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                text1 = txtnum1.getText().toString();
-                num1 = Integer.parseInt(text1);
-                text2 = txtnum2.getText().toString();
-                num2 = Integer.parseInt(text2);
-                Result = num1/num2;
+                if (txtnum1.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else if (txtnum2.length() == 0) {
+                    Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else {
+                    text1 = txtnum1.getText().toString();
+                    num1 = Integer.parseInt(text1);
+                    text2 = txtnum2.getText().toString();
+                    num2 = Integer.parseInt(text2);
+                    Result = num1 / num2;
+                }
             }
         });
         btnmosavi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name = txtname.getText().toString();
-                Intent intent =new Intent (MainActivity.this,MainActivity2.class);
-                intent.putExtra("Result",Result);
-                intent.putExtra("name",name);
-                startActivity(intent);
+                if (txtname.length()==0){
+                    Toast.makeText(MainActivity.this, "نام خود را وارد نمایید", Toast.LENGTH_SHORT).show();
+                }else if (txtnum1.length()==0){
+                    Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
+                } else if (txtnum2.length()==0) {
+                    Toast.makeText(MainActivity.this, "عدد دوم را وارد نمایید", Toast.LENGTH_SHORT).show();
+                }else {
+                    name = txtname.getText().toString();
+                    Intent intent =new Intent (MainActivity.this,MainActivity2.class);
+                    intent.putExtra("Result",Result);
+                    intent.putExtra("name",name);
+                    startActivity(intent);
+                }
             }
         });
     }
