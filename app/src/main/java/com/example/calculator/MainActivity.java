@@ -276,7 +276,9 @@ public class MainActivity extends AppCompatActivity {
         btnjam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                click = true;
+                if (!(txtnum1.length() == 0) && !(txtnum2.length() == 0)){
+                    click = true;
+                }
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
@@ -293,7 +295,9 @@ public class MainActivity extends AppCompatActivity {
         btnmenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                click = true;
+                if (!(txtnum1.length() == 0) && !(txtnum2.length() == 0)){
+                    click = true;
+                }
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
@@ -310,7 +314,9 @@ public class MainActivity extends AppCompatActivity {
         btnzarb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                click = true;
+                if (!(txtnum1.length() == 0) && !(txtnum2.length() == 0)){
+                    click = true;
+                }
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
@@ -327,7 +333,9 @@ public class MainActivity extends AppCompatActivity {
         btntaqsim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                click = true;
+                if (!(txtnum1.length() == 0) && !(txtnum2.length() == 0)){
+                    click = true;
+                }
                 if (txtnum1.length() == 0) {
                     Toast.makeText(MainActivity.this, "عدد اول را وارد نمایید", Toast.LENGTH_SHORT).show();
                 } else if (txtnum2.length() == 0) {
